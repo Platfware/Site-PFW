@@ -65,6 +65,17 @@ img.svg {
     clear: both
 }
 
+.platfware_container {
+    max-width: 90%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 0 40px;
+    position: relative;
+    clear: both
+}
+
 h1,
 h2,
 h3,
@@ -744,13 +755,6 @@ h6 {
 }
 
 .platfware_down .line_wrapper:before {
-    /* Gave this for some issue in a small line in about us ablove */
-    /* content: "";
-    background-color: #000;
-    width: 1px;
-    height: 50%;
-    display: block;
-    top: 0; */
     -webkit-animation: scroll-down 2s ease-in-out infinite;
     -ms-animation: scroll-down 2s ease-in-out infinite;
     animation: scroll-down 2s ease-in-out infinite
@@ -787,8 +791,8 @@ h6 {
     height: auto;
     clear: both;
     float: left;
-    background-color: #fff;
-    margin-bottom: 75px;
+    background-color: #e9e9e9;
+    padding-bottom: 75px;
     padding-top: 75px
 }
 
@@ -917,7 +921,8 @@ h6 {
     height: auto;
     clear: both;
     float: left;
-    padding: 75px 0 75px
+    padding: 75px 0 75px;
+    background-color: #e9e9e9;
 }
 
 .platfware_progress_part .part_inner {
@@ -1053,119 +1058,14 @@ h6 {
     letter-spacing: 10px
 }
 
+
 .platfware_partners {
     width: 100%;
     height: auto;
     clear: both;
     float: left;
     padding: 75px 0 75px;
-    background-color: #f9f9f9
-}
-
-.platfware_partners .partners_list {
-    width: 100%;
-    height: auto;
-    clear: both;
-    float: left;
-    padding-top: 90px
-}
-
-.platfware_partners ul {
-    margin: 0 0 0 -50px;
-    list-style-type: none
-}
-
-.platfware_partners ul li {
-    margin: 0 0 50px;
-    float: left;
-    width: 33.3333%;
-    padding-left: 50px
-}
-
-.platfware_partners ul li .list_inner {
-    width: 100%;
-    height: auto;
-    clear: both;
-    float: left;
-    position: relative;
-    border-radius: 5px;
-    overflow: hidden
-}
-
-.platfware_partners .image {
-    position: relative
-}
-
-.platfware_partners .image img {
-    min-width: 100%;
-    opacity: 0
-}
-
-.platfware_partners .image .main {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px
-}
-
-.platfware_partners .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease
-}
-
-.platfware_partners ul li .list_inner:hover .overlay {
-    opacity: 1;
-    visibility: visible;
-    /* background-color: #00bf63; */
-}
-
-.platfware_partners .details {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    z-index: 2;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -ms-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-}
-
-.platfware_partners ul li .list_inner:hover .details {
-    opacity: 1;
-    visibility: visible;
-    top: 40%;
-    left: 30%;
-    text-align: center;
-}  
-
-.platfware_partners .details span {
-    font-family: poppins; 
-}
-
-.platfware_partners .details h3 {
-    font-size: 18px;
-    font-weight: 600
+    background-color: #fff;
 }
 
 .platfware_full_link {
@@ -1401,7 +1301,7 @@ h6 {
     height: auto;
     clear: both;
     float: left;
-    background-color: #f9f9f9;
+    background-color: #e9e9e9;
     padding: 75px 0 75px
 }
 
@@ -1442,7 +1342,7 @@ h6 {
 
 .platfware_products .products_list ul li .image img {
     min-width: 100%;
-    opacity: 0
+    opacity: 0;
 }
 
 .platfware_products .products_list ul li .image .main {
@@ -2691,13 +2591,3 @@ body.modal {
         padding-left: 0
     }
 }
-
-
-
-
-
-
-
-
-
-
