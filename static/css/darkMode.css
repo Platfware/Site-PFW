@@ -1,0 +1,115 @@
+@charset "utf-8";
+body.dark {
+  background-color: #000;
+  color: #bbb;
+}
+body.dark ::-webkit-input-placeholder {
+  color: #fff;
+}
+body.dark :-moz-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+body.dark ::-moz-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+body.dark :-ms-input-placeholder {
+  color: #fff;
+}
+body.dark ::-ms-input-placeholder {
+  color: #fff;
+}
+body.dark ::placeholder {
+  color: #fff;
+}
+body.dark h3 {
+  color: #fff;
+}
+body.dark .platfware_topbar .logo .dark {
+  display: none;
+}
+body.dark .platfware_topbar .logo .light {
+  display: block;
+}
+body.dark .platfware_topbar.animate {
+  background-color: #000;
+  box-shadow: 0 0 10px rgb(255 255 255/10%);
+}
+body.dark .platfware_topbar .menu ul li a {
+  color: #fff;
+}
+body.dark .platfware_about {
+  background-color: transparent;
+}
+body.dark .platfware_about .right .list ul li span {
+  color: #fff;
+}
+body.dark .platfware_about .right .list ul li .svg {
+  color: #fff;
+}
+body.dark .platfware_button a:hover {
+  color: #fff;
+}
+body.dark .platfware_about .left .main {
+  box-shadow: none;
+}
+body.dark .platfware_portfolio {
+  background-color: #111;
+}
+body.dark .overlay_effect:after {
+  background-color: #111;
+}
+body.dark .platfware_portfolio .overlay {
+  background-color: #111;
+}
+body.dark .platfware_products {
+  background-color: #111;
+}
+body.dark .platfware_products .products_list ul li .details .title a {
+  color: #fff;
+}
+body.dark .platfware_products .products_list ul li .details .date {
+  color: #bbb;
+}
+body.dark .platfware_products .products_list ul li .details .date a {
+  color: #bbb;
+}
+body.dark .platfware_modalbox_products .details .title {
+  color: #000;
+}
+body.dark .platfware_modalbox_products .description p {
+  color: #767676;
+}
+body.dark .platfware_contact .fields ul li input {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  color: #fff;
+}
+body.dark .platfware_contact .fields .last textarea {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+  color: #fff;
+}
+body.dark .platfware_contact .info_list ul li span {
+  color: #fff;
+}
+body.dark .platfware_contact .info_list ul li .svg {
+  color: #fff;
+}
+body.dark .platfware_contact .info_list ul li a:hover {
+  color: #fff !important;
+}
+body.dark .platfware_copyright {
+  background-color: #111;
+  padding-top: 95px;
+}
+body.dark .my_wave {
+  display: none;
+}
+body.dark .progress_inner .background {
+  background: rgba(255, 255, 255, 0.09);
+}
+body.dark .progress_inner > span {
+  color: #fff;
+}

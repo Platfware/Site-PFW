@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.platfware_settings .colors li a.green{background-color: #00bf63;}
+
+.platfware_all_wrap[data-color="green"] .platfware_topbar .menu ul li.current a{color: #00bf63;}
+.platfware_all_wrap[data-color="green"] .platfware_topbar .menu ul li a:hover{color: #00bf63;}
+.platfware_all_wrap[data-color="green"] .platfware_title_holder span{color: #00bf63;}
+.platfware_all_wrap[data-color="green"] .platfware_button a{background-color: #00bf63;border-color:#00bf63;}
+.platfware_all_wrap[data-color="green"] .platfware_products .products_list ul li .details .title a:hover{color: #00bf63;}
+.platfware_all_wrap[data-color="green"] .platfware_products .products_list ul li .details .date a:hover{color: #00bf63;}
+.platfware_all_wrap[data-color="green"] .cursor-inner.cursor-hover{background-color: #00bf63;}
+.platfware_all_wrap[data-color="green"] .cursor-outer{border-color: #00bf63;}
+.platfware_all_wrap[data-color="green"] .cursor-inner{background-color: #00bf63;}
+.platfware_all_wrap[data-color="green"] .progress_inner .background .bar_in{background: #00bf63;}
+
+
