@@ -1,5 +1,5 @@
 from flask import Flask,render_template,request
-
+import mail
 
 app = Flask(__name__)
 
@@ -11,14 +11,12 @@ def home():
         email = request.form.get("email")
         number = request.form.get("number")
         message = request.form.get("message")
-        print("Name:", name)
-        print("Email:", email)
-        print("Number:", number)
-        print("Message:", message)
+        mail.acknowledge(name,email)
+        mail.send_contact_info_to_platfware(name,email,number,message)
 
     return render_template("index.html")
 
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

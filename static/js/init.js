@@ -52,7 +52,85 @@ jQuery(document).ready(function(){
 // ------------------------------------------------------------------------
 // ---------------   CONTACTS VALIDATION FUNCTION    ----------------------
 // ------------------------------------------------------------------------
+document.getElementById("send_message").addEventListener("click", function (event) {
+    event.preventDefault(); // Prevents default anchor behavior
 
+    // Get form field values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const number = document.getElementById("number").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    // Regular expressions for validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phonePattern = /^\d{10}$/;
+
+    // Check if all fields are empty
+    if (!name && !email && !number && !message) {
+      document.querySelector(".empty_notice").style.display = "block";
+      document.getElementById("error_message").textContent = "Enter the data properly";
+      return;
+    }
+
+    // Check each field against its conditions
+    let isValid = true;
+    let errorMessage = "";
+
+    if (name === "" || name.length > 14) {
+      errorMessage = "Name must be 14 characters or fewer.";
+      isValid = false;
+    } else if (!emailPattern.test(email)) {
+      errorMessage = "Please enter a valid email address.";
+      isValid = false;
+    } else if (!phonePattern.test(number)) {
+      errorMessage = "Mobile number must be exactly 10 digits.";
+      isValid = false;
+    } else if (message === "") {
+      errorMessage = "Message field cannot be empty.";
+      isValid = false;
+    }
+
+    if (isValid) {
+      // Submit the form using AJAX
+      const form = document.getElementById("contact_form");
+      const formData = new FormData(form);
+
+      fetch("/", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        // Show success message
+        const returnMessage = document.querySelector(".returnmessage");
+        returnMessage.style.display = "block";
+        returnMessage.textContent = "Your message has been received. We will contact you soon.";
+
+        // Clear the input fields
+        document.getElementById("contact_form").reset();
+
+        // Hide success message after 3 seconds
+        setTimeout(() => {
+          returnMessage.style.display = "none";
+        }, 3000);
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+    } else {
+      // Display error message
+      document.querySelector(".empty_notice").style.display = "block";
+      document.getElementById("error_message").textContent = errorMessage;
+    }
+  });
+
+  // Hide error message when user starts typing in any input field
+  const inputs = document.querySelectorAll("#name, #email, #number, #message");
+  inputs.forEach(input => {
+    input.addEventListener("input", () => {
+      document.querySelector(".empty_notice").style.display = "none";
+    });
+  });
 
 
 
